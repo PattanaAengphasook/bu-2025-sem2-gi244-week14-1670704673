@@ -26,12 +26,12 @@ public class MenuUIHandler : MonoBehaviour
 
     public void StartNew()
     {
-
+        SceneManager.LoadScene("Main");
     }
 
     public void Exit()
     {
-
+        Application.Quit();
     }
 
     public void SaveColorClicked()
