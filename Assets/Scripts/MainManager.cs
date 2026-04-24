@@ -1,3 +1,4 @@
+using System.Drawing.Imaging;
 using System.IO;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -33,9 +34,6 @@ public class MainManager : MonoBehaviour
 
     public void SaveColor()
     {
-<<<<<<< Updated upstream
-
-=======
         string folder = Application.persistentDataPath; //"C:\\Users\\Administrator\\Desktop\\Week 14 Pattana";
         string fileName = "saveData.json";
         string fullPath = Path.Combine(folder, fileName);
@@ -54,14 +52,10 @@ public class MainManager : MonoBehaviour
         //PlayerPrefs.SetFloat("TeamColor.g", TeamColor.g);
         //PlayerPrefs.SetFloat("TeamColor.b", TeamColor.b);
         //PlayerPrefs.SetFloat("TeamColor.a", TeamColor.a);
->>>>>>> Stashed changes
     }
 
     public void LoadColor()
     {
-<<<<<<< Updated upstream
-
-=======
         string folder = Application.persistentDataPath; //"C:\\Users\\Administrator\\Desktop\\Week 14 Pattana";
         string fileName = "saveData.json";
         string fullPath = Path.Combine(folder, fileName);
@@ -78,6 +72,5 @@ public class MainManager : MonoBehaviour
         //TeamColor.g = PlayerPrefs.GetFloat("TeamColor.g");
         //TeamColor.b = PlayerPrefs.GetFloat("TeamColor.b");
         //TeamColor.a = PlayerPrefs.GetFloat("TeamColor.a");
->>>>>>> Stashed changes
     }
 }
