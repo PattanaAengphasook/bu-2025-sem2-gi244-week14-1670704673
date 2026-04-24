@@ -3,23 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIMainScene : MonoBehaviour
 {
     public static UIMainScene Instance { get; private set; }
-    
+
     public interface IUIInfoContent
     {
         string GetName();
         string GetData();
         void GetContent(ref List<Building.InventoryEntry> content);
     }
-    
+
     public InfoPopup InfoPopup;
     public ResourceDatabase ResourceDB;
 
     protected IUIInfoContent m_CurrentContent;
     protected List<Building.InventoryEntry> m_ContentBuffer = new List<Building.InventoryEntry>();
+
+    public Button exitButton;
 
 
     private void Awake()
@@ -27,7 +30,19 @@ public class UIMainScene : MonoBehaviour
         Instance = this;
         InfoPopup.gameObject.SetActive(false);
         ResourceDB.Init();
+
+        //exitButton.onClick.AddListener(BackToMenu);
+
+        exitButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Menu");
+        });
     }
+
+   // private void BackToMenu()
+    //{
+    //    SceneManager.LoadScene("Menu");
+    //}
 
     private void OnDestroy()
     {
