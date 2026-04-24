@@ -41,6 +41,11 @@ public class MenuUIHandler : MonoBehaviour
 
     public void LoadColorClicked()
     {
+<<<<<<< Updated upstream
 
+=======
+        MainManager.GetInstance().LoadColor();
+        ColorPicker.SelectColor(MainManager.GetInstance().TeamColor);
+>>>>>>> Stashed changes
     }
 }
